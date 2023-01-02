@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+<link rel="stylesheet" href="./day15a.css">
+    
+        <title>pagination</title>
+      </head>
+      <body>
+        <section>
+        <h1>BW42D day 15 Task</h1>
+        <div id="container">
+          <table>
+            <thead>
+            <tr>
+              <th>id</th><th>name</th><th>email</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+             
+          </table>
+          <div id="pagination"></div>
+        </div>.
+        </section>
+        <br></br>
+      <section id="Bw">
+          
+    
+    
+        <form>
+         <img src="data:image/png;base64,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" alt="Sunflower" style="float: left; margin-right: 15px;">
+             <fieldset>
+               <legend>Personal Details</legend>
+                
+          
+         <p>
+              <label>
+           Salutation
+           <br />
+       <select name="salutation">
+                     <option>--None--</option>
+                     <option>Mr.</option>
+                     <option>Ms.</option>
+                     <option>Mrs.</option>
+                     <option>Dr.</option>
+                     <option>Prof.</option>
+          </select>
+        </label>
+       </p>
+          
+          
+                
+          
+         <p>
+          <label>First name: <input name="firstName" /></label>
+         </p>
+          
+          
+                
+          
+         <p>
+          <label>Last name: <input name="lastName" /></label>
+         </p>
+          
+          <p>
+         <label>district:
+           <select for="district" placeholder="enter your city">
+               <option>--city--</option>
+               <option>tiruppur</option>
+               <option>chennai</option>
+               <option>coimbatore</option>
+              <option>madurai</option>
+              <option>trichy</option>
+              <option>kanchipuram</option>
+              <option>salem</option>
+              <option>erode</option>
+          </label>
+          
+         </p>
+         <br><br>
+         <p>
+                 Gender :
+                 <label><input type="radio" name="gender" value="male" /> Male</label>
+                 <label><input type="radio" name="gender" value="female" /> Female</label>
+               </p>
+          
+          
+                
+          
+         <p>
+          <label>Email:<input type="email" name="email" /></label>
+          </p>
+      
+         <p>
+                 <label>Date of Birth:<input type="date" name="birthDate"></label>
+          </p>
+          
+         <p>
+         <label>
+            Address :
+            <br />
+           <textarea name="address" cols="30" rows="3"></textarea>
+            </label>
+            </p>
+       
+         <p>
+          <button type="submit">Submit</button>
+          </p>
+          
+         </fieldset>
+           </form>
+          </section>
+
+    <script src="./day15a.js"></script>
+</body>
+</html>
